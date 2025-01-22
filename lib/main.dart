@@ -13,56 +13,77 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: AppBar(
-          
-          backgroundColor: Colors.blue,
-          title: const Text(
-            'Funnel Network',
-            style: TextStyle(
-              fontWeight: FontWeight.bold,
-              color: Colors.white,
-            ),
-          ),
-          centerTitle: true,
-          leading: IconButton(
-            icon: SvgPicture.asset(
-              'assets/icons/triple line.svg',
-              height: 24.0,
-              width: 24.0,
-              color: Colors.white,
-            ),
-            onPressed: () {},
-          ),
-          actions: [
-           
-            IconButton(
-              icon: SvgPicture.asset(
-                'assets/icons/search_black_24dp.svg',
-                height: 24.0,
-                width: 24.0,
-                color: Colors.white,
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(300.0),
+          child: AppBar(
+            backgroundColor: Colors.blue,
+            flexibleSpace: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      IconButton(
+                        icon: SvgPicture.asset(
+                          'assets/icons/triple line.svg',
+                          height: 24.0,
+                          width: 24.0,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
+                      ),
+                      const SizedBox(width: 20), // Adjust the width as needed
+                      const Text(
+                        'Funnel Network',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
+                        ),
+                      ),
+                      const SizedBox(width: 100), // Adjust the width as needed
+                      const Text(
+                        'Fy:2023',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      IconButton(
+                        icon: SvgPicture.asset(
+                          'assets/icons/search_black_24dp.svg',
+                          height: 24.0,
+                          width: 24.0,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
+                      ),
+                      
+                    ],
+                  ),
+                ],
               ),
-              onPressed: () {},
             ),
-          ],
+          ),
         ),
         body: Center(
-          child: Container(
-            color: Colors.blueGrey,
-            height: 219,
-            width: 390,
-            alignment: Alignment.center,
-            child: const Text(
-              'Sacn Documents',
-              style: TextStyle(
-                color: Colors.white,
-                fontSize: 24,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-          ),
+          child: 
+          SizedBox(
+                  width: double.infinity,
+                  child: Card(
+                    elevation: 10,
+                    shape: RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(16),
+                    ),
+                    
+                   
+          )
         ),
       ),
+      )
     );
   }
 }
