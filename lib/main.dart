@@ -48,7 +48,7 @@ class MyApp extends StatelessWidget {
         ),
         body: Center(
           child: Container(
-            color: Colors.blue,
+            color: Colors.blueGrey,
             height: 219,
             width: 390,
             alignment: Alignment.center,
