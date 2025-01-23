@@ -49,7 +49,7 @@ class MyApp extends StatelessWidget {
                           style: TextStyle(
                             fontWeight: FontWeight.bold,
                             color: Colors.white,
-                            fontSize: 20,
+                            fontSize: 22,
                           ),
                         ),
                         const Spacer(), // Pushes the FY2023 text and icons to the right
@@ -57,7 +57,7 @@ class MyApp extends StatelessWidget {
                           'FY2023',
                           style: TextStyle(
                             color: Colors.white,
-                            fontSize: 16,
+                            fontSize: 14,
                           ),
                         ),
                         const SizedBox(width: 10), // Adjust the width as needed
@@ -80,56 +80,173 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.all(20.0),
               child: Column(
                 children: [
-                  Expanded(
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                            width: 330, // Set the width of the Container
+                            height: 159, // Set the height of the Container
+                            color: Color(0xFF298EFF),
                     child: Column(
                       children: [
-                        ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
+                        Padding(
+                          padding: const EdgeInsets.all(20.0),
                           child: Container(
-                            width: double.infinity, // Set the width to fill the parent
-                            height: 150, // Set the height of the Container
+                            width: 330, // Set the width of the Container
+                            height: 159, // Set the height of the Container
                             color: Color(0xFF298EFF),
-                            child: Center(
-                              child: Text(
-                                'Column 1',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
+                              children: [
+                                IconButton(
+                                  icon: SvgPicture.asset(
+                                    'assets/icons/Group 2504.svg',
+                                    height: 42.0,
+                                    width: 42.0,
+                                    color: Colors.white,
+                                  ),
+                                  onPressed: () {},
                                 ),
-                              ),
+                                const SizedBox(width: 10),
+                               
+                                    Text(
+                                      'Scan documents',
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 20,
+                                      ),
+                                    ),
+                                  
+                                const SizedBox(width: 10),
+                                IconButton(
+                                  icon: SvgPicture.asset(
+                                    'assets/icons/Group 2505.svg',
+                                    height: 42.0,
+                                    width: 42.0,
+                                  ),
+                                  onPressed: () {},
+                                ),
+                              ],
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
-                        // Add more widgets here for Column 1
                       ],
                     ),
                   ),
-                  SizedBox(width: 20), // Space between the two columns
-                  Expanded(
-                    child: Column(
-                      children: [
-                        ClipRRect(
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Text(
+                        "Company reports",
+                        textAlign: TextAlign.left,
+                        style: TextStyle(
+                          color: Colors.black,
+                          fontSize: 14,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 20),
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                      width: 330, // Set the width of the Container
+                      height: 150, // Set the height of the Container
+                      color: Color(0xFF298EFF),
+                      child: Center(
+                        child: Text(
+                          'check vouchers entries created by accountant',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 20),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            width: double.infinity, // Set the width to fill the parent
-                            height: 150, // Set the height of the Container
-                            color: Color(0xFF298EFF),
+                            height: 159, // Set the height of the Container
+                            color: Color(0xFFD7FDFF),
                             child: Center(
                               child: Text(
-                                'Column 2',
+                                'generate invoice, quotation,etc',
                                 style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
+                                  color: Color(0xFF57B9BF),
+                                  fontSize: 16,
                                 ),
                               ),
                             ),
                           ),
                         ),
-                        SizedBox(height: 20),
-                        // Add more widgets here for Column 2
-                      ],
-                    ),
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            height: 159, // Set the height of the Container
+                            color: Color(0xFFF6F1FF),
+                            child: Center(
+                              child: Text(
+                                'gst - gstr1, 2, 3b etc.',
+                                style: TextStyle(
+                                  color: Color(0xFF9987E2),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 10),
+                  Row(
+                    children: [
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            height: 159, // Set the height of the Container
+                            color: Color(0xFFE2EAFF),
+                            child: Center(
+                              child: Text(
+                                'All Ledgers Are Shown Here',
+                                style: TextStyle(
+                                  color: Color(0xFF587AD2),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                      SizedBox(width: 10),
+                      Expanded(
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            height: 159, // Set the height of the Container
+                            color: Color(0xFFCFE6FF),
+                            child: Center(
+                              child: Text(
+                                'All Profit & Loss Are Shown Here',
+                                style: TextStyle(
+                                  color: Color(0xFF1E78AF),
+                                  fontSize: 16,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ),
+                      ),
+                    ],
                   ),
                 ],
               ),
