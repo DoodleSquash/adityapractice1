@@ -11,79 +11,132 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData.dark(useMaterial3: true),
       debugShowCheckedModeBanner: false,
       home: Scaffold(
-        appBar: PreferredSize(
-          preferredSize: const Size.fromHeight(300.0),
-          child: AppBar(
-            backgroundColor: Colors.blue,
-            flexibleSpace: Padding(
+        body: Stack(
+          children: <Widget>[
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.white,
+              ),
+            ),
+            Container(
+              height: 219,
+              decoration: BoxDecoration(
+                color: Color(0xFF0073DE),
+              ),
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.start,
+                      children: [
+                        IconButton(
+                          icon: SvgPicture.asset(
+                            'assets/icons/triple line.svg',
+                            height: 18.0,
+                            width: 12.0,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+                        const SizedBox(width: 10), // Adjust the width as needed
+                        const Text(
+                          'Funnel Network',
+                          style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.white,
+                            fontSize: 20,
+                          ),
+                        ),
+                        const Spacer(), // Pushes the FY2023 text and icons to the right
+                        const Text(
+                          'FY2023',
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 16,
+                          ),
+                        ),
+                        const SizedBox(width: 10), // Adjust the width as needed
+                        IconButton(
+                          icon: SvgPicture.asset(
+                            'assets/icons/search_black_24dp.svg',
+                            height: 32.0,
+                            width: 32.0,
+                            color: Colors.white,
+                          ),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  ],
+                ),
+              ),
+            ),
+            Padding(
               padding: const EdgeInsets.all(20.0),
               child: Column(
-                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    children: [
-                      IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/icons/triple line.svg',
-                          height: 24.0,
-                          width: 24.0,
-                          color: Colors.white,
+                  Expanded(
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            width: double.infinity, // Set the width to fill the parent
+                            height: 150, // Set the height of the Container
+                            color: Color(0xFF298EFF),
+                            child: Center(
+                              child: Text(
+                                'Column 1',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                        onPressed: () {},
-                      ),
-                      const SizedBox(width: 20), // Adjust the width as needed
-                      const Text(
-                        'Funnel Network',
-                        style: TextStyle(
-                          fontWeight: FontWeight.bold,
-                          color: Colors.white,
-                          fontSize: 20,
+                        SizedBox(height: 20),
+                        // Add more widgets here for Column 1
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 20), // Space between the two columns
+                  Expanded(
+                    child: Column(
+                      children: [
+                        ClipRRect(
+                          borderRadius: BorderRadius.circular(16),
+                          child: Container(
+                            width: double.infinity, // Set the width to fill the parent
+                            height: 150, // Set the height of the Container
+                            color: Color(0xFF298EFF),
+                            child: Center(
+                              child: Text(
+                                'Column 2',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                      const SizedBox(width: 100), // Adjust the width as needed
-                      const Text(
-                        'Fy:2023',
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 16,
-                        ),
-                      ),
-                      const SizedBox(width: 20),
-                      IconButton(
-                        icon: SvgPicture.asset(
-                          'assets/icons/search_black_24dp.svg',
-                          height: 24.0,
-                          width: 24.0,
-                          color: Colors.white,
-                        ),
-                        onPressed: () {},
-                      ),
-                      
-                    ],
+                        SizedBox(height: 20),
+                        // Add more widgets here for Column 2
+                      ],
+                    ),
                   ),
                 ],
               ),
             ),
-          ),
-        ),
-        body: Center(
-          child: 
-          SizedBox(
-                  width: double.infinity,
-                  child: Card(
-                    elevation: 10,
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(16),
-                    ),
-                    
-                   
-          )
+          ],
         ),
       ),
-      )
     );
   }
 }
