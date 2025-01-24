@@ -43,7 +43,7 @@ class MyApp extends StatelessWidget {
                           ),
                           onPressed: () {},
                         ),
-                        const SizedBox(width: 10), // Adjust the width as needed
+                        const SizedBox(width: 10),
                         const Text(
                           'Funnel Network',
                           style: TextStyle(
@@ -52,7 +52,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 22,
                           ),
                         ),
-                        const Spacer(), // Pushes the FY2023 text and icons to the right
+                        const Spacer(),
                         const Text(
                           'FY2023',
                           style: TextStyle(
@@ -60,7 +60,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                        const SizedBox(width: 10), // Adjust the width as needed
+                        const SizedBox(width: 10),
                         IconButton(
                           icon: SvgPicture.asset(
                             'assets/icons/search_black_24dp.svg',
@@ -83,8 +83,8 @@ class MyApp extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Container(
-                      width: 330, // Set the width of the Container
-                      height: 159, // Set the height of the Container
+                      width: 330,
+                      height: 159,
                       color: Color(0xFF298EFF),
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -152,8 +152,8 @@ class MyApp extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Container(
-                      width: 330, // Set the width of the Container
-                      height: 150, // Set the height of the Container
+                      width: 330,
+                      height: 150,
                       color: Color(0xFF298EFF),
                       child: Center(
                         child: Text(
@@ -173,7 +173,7 @@ class MyApp extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            height: 159, // Set the height of the Container
+                            height: 159,
                             color: Color(0xFFD7FDFF),
                             child: Center(
                               child: Text(
@@ -192,7 +192,7 @@ class MyApp extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            height: 159, // Set the height of the Container
+                            height: 159,
                             color: Color(0xFFF6F1FF),
                             child: Center(
                               child: Text(
@@ -215,7 +215,7 @@ class MyApp extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            height: 159, // Set the height of the Container
+                            height: 159,
                             color: Color(0xFFE2EAFF),
                             child: Center(
                               child: Text(
@@ -234,7 +234,7 @@ class MyApp extends StatelessWidget {
                         child: ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            height: 159, // Set the height of the Container
+                            height: 159,
                             color: Color(0xFFCFE6FF),
                             child: Center(
                               child: Text(
@@ -250,13 +250,11 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  //lower blue container
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Container(
-                      width: 330, // Set the width of the Container
-                      height: 70, // Set the height of the Container
+                      width: 330,
+                      height: 70,
                       color: Color(0xFF298EFF),
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -284,7 +282,6 @@ class MyApp extends StatelessWidget {
                               'assets/icons/notifications_black_24dp.svg',
                               height: 28.0,
                               width: 28.0,
-                              // color: Colors.white,
                             ),
                             onPressed: () {},
                           ),
@@ -310,32 +307,28 @@ class MyApp extends StatelessWidget {
                 width: 100,
                 alignment: Alignment.center,
                 child: OutlinedButton.icon(
-                  iconAlignment: IconAlignment.end,
                   onPressed: () {},
                   icon: SvgPicture.asset(
-                    'assets/icons/Path 83457.svg', // Replace with your icon path
+                    'assets/icons/Path 83457.svg',
                     height: 24.0,
                     width: 24.0,
                   ),
                   label: Text(
                     "New",
-                    style: TextStyle(color: Colors.black,fontSize:10 ),
-                    
+                    style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   style: OutlinedButton.styleFrom(
-                    backgroundColor:
-                        Colors.white, // Set the background color to white
+                    backgroundColor: Colors.white,
                     side: BorderSide(
-                        color:
-                            Color(0xFF298EFF)), // Set the border color to blue
+                      color: Color(0xFF298EFF),
+                    ),
                     shape: RoundedRectangleBorder(
-                      borderRadius:
-                          BorderRadius.circular(12), // Set less rounded corners
+                      borderRadius: BorderRadius.circular(8),
                     ),
                   ),
                 ),
               ),
-            )
+            ),
           ],
         ),
       ),
