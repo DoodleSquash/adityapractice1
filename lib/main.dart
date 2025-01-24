@@ -83,68 +83,70 @@ class MyApp extends StatelessWidget {
                   ClipRRect(
                     borderRadius: BorderRadius.circular(16),
                     child: Container(
-                            width: 330, // Set the width of the Container
-                            height: 159, // Set the height of the Container
-                            color: Color(0xFF298EFF),
-                    child: Column(
-                      children: [
-                        Padding(
-                          padding: const EdgeInsets.all(20.0),
-                          child: Container(
-                            width: 330, // Set the width of the Container
-                            height: 159, // Set the height of the Container
-                            color: Color(0xFF298EFF),
-                            child: Row(
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly ,
-                              children: [
-                                IconButton(
-                                  icon: SvgPicture.asset(
-                                    'assets/icons/Group 2504.svg',
-                                    height: 42.0,
-                                    width: 42.0,
-                                    color: Colors.white,
-                                  ),
-                                  onPressed: () {},
+                      width: 330, // Set the width of the Container
+                      height: 159, // Set the height of the Container
+                      color: Color(0xFF298EFF),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                            children: [
+                              IconButton(
+                                icon: SvgPicture.asset(
+                                  'assets/icons/Group 2504.svg',
+                                  height: 42.0,
+                                  width: 42.0,
+                                  color: Colors.white,
                                 ),
-                                const SizedBox(width: 10),
-                               
-                                    Text(
-                                      'Scan documents',
-                                      style: TextStyle(
-                                        color: Colors.white,
-                                        fontSize: 20,
-                                      ),
-                                    ),
-                                  
-                                const SizedBox(width: 10),
-                                IconButton(
-                                  icon: SvgPicture.asset(
-                                    'assets/icons/Group 2505.svg',
-                                    height: 42.0,
-                                    width: 42.0,
-                                  ),
-                                  onPressed: () {},
+                                onPressed: () {},
+                              ),
+                              const SizedBox(width: 10),
+                              Text(
+                                'Scan documents',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 20,
                                 ),
-                              ],
+                              ),
+                              const SizedBox(width: 10),
+                              IconButton(
+                                icon: SvgPicture.asset(
+                                  'assets/icons/Group 2505.svg',
+                                  height: 42.0,
+                                  width: 42.0,
+                                ),
+                                onPressed: () {},
+                              ),
+                            ],
+                          ),
+                          Container(
+                            width: 228,
+                            height: 32,
+                            child: Text(
+                              "Scan Bills, Receipts, Invoices, Payment And Other Documents",
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 12,
+                              ),
                             ),
                           ),
-                        ),
-                      ],
+                        ],
+                      ),
                     ),
                   ),
-                  ),
                   SizedBox(height: 20),
-                  Row(
-                    children: [
-                      Text(
-                        "Company reports",
-                        textAlign: TextAlign.left,
-                        style: TextStyle(
-                          color: Colors.black,
-                          fontSize: 14,
-                        ),
+                  Container(
+                    alignment: Alignment.centerLeft,
+                    child: Text(
+                      "Company reports",
+                      textAlign: TextAlign.left,
+                      style: TextStyle(
+                        color: Colors.black,
+                        fontSize: 14,
                       ),
-                    ],
+                    ),
                   ),
                   SizedBox(height: 20),
                   ClipRRect(
@@ -248,9 +250,92 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
+
+                  //lower blue container
+                  ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: Container(
+                      width: 330, // Set the width of the Container
+                      height: 70, // Set the height of the Container
+                      color: Color(0xFF298EFF),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/home_black_24dp_fille.svg',
+                              height: 28.0,
+                              width: 28.0,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {},
+                          ),
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/dashboard_black_24dp.svg',
+                              height: 28.0,
+                              width: 28.0,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {},
+                          ),
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/notifications_black_24dp.svg',
+                              height: 28.0,
+                              width: 28.0,
+                              // color: Colors.white,
+                            ),
+                            onPressed: () {},
+                          ),
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/account_circle_black_24dp.svg',
+                              height: 28.0,
+                              width: 28.0,
+                              color: Colors.white,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
                 ],
               ),
             ),
+            Container(
+              child: Container(
+                height: 47,
+                width: 100,
+                alignment: Alignment.center,
+                child: OutlinedButton.icon(
+                  iconAlignment: IconAlignment.end,
+                  onPressed: () {},
+                  icon: SvgPicture.asset(
+                    'assets/icons/Path 83457.svg', // Replace with your icon path
+                    height: 24.0,
+                    width: 24.0,
+                  ),
+                  label: Text(
+                    "New",
+                    style: TextStyle(color: Colors.black,fontSize:10 ),
+                    
+                  ),
+                  style: OutlinedButton.styleFrom(
+                    backgroundColor:
+                        Colors.white, // Set the background color to white
+                    side: BorderSide(
+                        color:
+                            Color(0xFF298EFF)), // Set the border color to blue
+                    shape: RoundedRectangleBorder(
+                      borderRadius:
+                          BorderRadius.circular(12), // Set less rounded corners
+                    ),
+                  ),
+                ),
+              ),
+            )
           ],
         ),
       ),
