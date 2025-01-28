@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         body: Stack(
           children: <Widget>[
             AspectRatio(
-              aspectRatio: 16 / 9, // Set the desired aspect ratio
+              aspectRatio: 1.77 / 1, // Set the desired aspect ratio
               child: Container(
                 color: Colors.white,
                 // Other properties or child widgets can go here
