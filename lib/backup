@@ -1,81 +1,122 @@
+import 'dart:ui';
 
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
+void main() {
+  runApp(MyApp());
+}
 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Positioned(
-              height: 159,
-              top: 140,
-              left: 30,
-              child: ClipRRect(
-                borderRadius: BorderRadius.circular(24),
-                child: Container(
-                  width: 330, // Set the width of the Container
-                  height: 159, // Set the height of the Container
-                  color: Color(0xFF298EFF),
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      theme: ThemeData.dark(useMaterial3: true),
+      debugShowCheckedModeBanner: false,
+      home: Scaffold(
+        appBar: PreferredSize(
+          preferredSize: const Size.fromHeight(100.0),
+          child: AppBar(
+            backgroundColor: Colors.blue,
+            flexibleSpace: Padding(
+              padding: const EdgeInsets.all(20.0),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
                     children: [
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          IconButton(
-                            icon: SvgPicture.asset(
-                              'assets/icons/Group 2504.svg',
-                              height: 42.0,
-                              width: 42.0,
-                            ),
-                            onPressed: () {},
-                          ),
-                          const SizedBox(width: 10),
-                          Text(
-                            'Scan documents',
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                            ),
-                          ),
-                          const SizedBox(width: 10),
-                          IconButton(
-                            icon: SvgPicture.asset(
-                              'assets/icons/Group 2505.svg',
-                              height: 42.0,
-                              width: 42.0,
-                            ),
-                            onPressed: () {},
-                          ),
-                        ],
+                      IconButton(
+                        icon: SvgPicture.asset(
+                          'assets/icons/triple line.svg',
+                          height: 24.0,
+                          width: 24.0,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
                       ),
-                      SizedBox(
-                        width: 228,
-                        height: 32,
-                        child: Text(
-                          "Scan Bills, Receipts, Invoices, Payment And Other Documents",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 12,
-                          ),
+                      const SizedBox(width: 20), // Adjust the width as needed
+                      const Text(
+                        'Funnel Network',
+                        style: TextStyle(
+                          fontWeight: FontWeight.bold,
+                          color: Colors.white,
+                          fontSize: 20,
                         ),
                       ),
+                      const SizedBox(width: 100), // Adjust the width as needed
+                      const Text(
+                        'Fy:2023',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                        ),
+                      ),
+                      const SizedBox(width: 20),
+                      IconButton(
+                        icon: SvgPicture.asset(
+                          'assets/icons/search_black_24dp.svg',
+                          height: 24.0,
+                          width: 24.0,
+                          color: Colors.white,
+                        ),
+                        onPressed: () {},
+                      ),
+                      
                     ],
+                  ),
+                ],
+              ),
+            ),
+          ),
+        ),
+        body: Padding(
+          padding: const EdgeInsets.all(20.0),
+          child: Center(
+          child: Column(
+            children: [
+              Container(
+                color: Colors.red,
+              ),
+              SizedBox(
+                width: double.infinity,
+                child: Card(
+                  elevation: 10,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                  child: ClipRRect(
+                    borderRadius: BorderRadius.circular(16),
+                    child: BackdropFilter(
+                      filter: ImageFilter.blur(
+                        sigmaX: 10,
+                        sigmaY: 10,
+                      ),
+                      child: Padding(
+                        padding: const EdgeInsets.all(16.0),
+                        child: Column(
+                          children: [
+                            Text(
+                              'fhjksfhdhjdK',
+                              style: const TextStyle(
+                                fontSize: 32,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
                   ),
                 ),
               ),
-            ),
+            ],
+          ),
+                ),
+        ),
+      )
+    );
+  }
+}

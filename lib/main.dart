@@ -17,7 +17,7 @@ class MyApp extends StatelessWidget {
         body: Stack(
           children: <Widget>[
             AspectRatio(
-              aspectRatio: 1.77 / 1, // Set the desired aspect ratio
+              aspectRatio: 16 / 9, // Set the desired aspect ratio
               child: Container(
                 color: Colors.white,
                 // Other properties or child widgets can go here
@@ -50,7 +50,7 @@ class MyApp extends StatelessWidget {
                           ),
                           onPressed: () {},
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 10), // Adjust the width as needed
                         const Text(
                           'Funnel Network',
                           style: TextStyle(
@@ -59,7 +59,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 22,
                           ),
                         ),
-                        const Spacer(),
+                        const Spacer(), // Pushes the FY2023 text and icons to the right
                         const Text(
                           'FY2023',
                           style: TextStyle(
@@ -67,7 +67,7 @@ class MyApp extends StatelessWidget {
                             fontSize: 14,
                           ),
                         ),
-                        const SizedBox(width: 10),
+                        const SizedBox(width: 10), // Adjust the width as needed
                         IconButton(
                           icon: SvgPicture.asset(
                             'assets/icons/search_black_24dp.svg',
@@ -83,172 +83,353 @@ class MyApp extends StatelessWidget {
                 ),
               ),
             ),
-            Padding(
-              padding: const EdgeInsets.all(20.0),
-              child: Column(
-                children: [
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Container(
-                      width: 330,
-                      height: 159,
-                      color: Color(0xFF298EFF),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                            children: [
-                              IconButton(
-                                icon: SvgPicture.asset(
-                                  'assets/icons/Group 2504.svg',
-                                  height: 42.0,
-                                  width: 42.0,
-                                  color: Colors.white,
-                                ),
-                                onPressed: () {},
-                              ),
-                              const SizedBox(width: 10),
-                              Text(
-                                'Scan documents',
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontSize: 20,
-                                ),
-                              ),
-                              const SizedBox(width: 10),
-                              IconButton(
-                                icon: SvgPicture.asset(
-                                  'assets/icons/Group 2505.svg',
-                                  height: 42.0,
-                                  width: 42.0,
-                                ),
-                                onPressed: () {},
-                              ),
-                            ],
-                          ),
-                          Container(
-                            width: 228,
-                            height: 32,
-                            child: Text(
-                              "Scan Bills, Receipts, Invoices, Payment And Other Documents",
-                              textAlign: TextAlign.center,
-                              style: TextStyle(
-                                color: Colors.white,
-                                fontSize: 12,
-                              ),
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Container(
-                    alignment: Alignment.centerLeft,
-                    child: Text(
-                      "Company reports",
-                      textAlign: TextAlign.left,
-                      style: TextStyle(
-                        color: Colors.black,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  ClipRRect(
-                    borderRadius: BorderRadius.circular(16),
-                    child: Container(
-                      width: 330,
-                      height: 150,
-                      color: Color(0xFF298EFF),
-                      child: Center(
-                        child: Text(
-                          'check vouchers entries created by accountant',
-                          style: TextStyle(
-                            color: Colors.white,
-                            fontSize: 20,
-                          ),
-                        ),
-                      ),
-                    ),
-                  ),
-                  SizedBox(height: 20),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: Container(
-                            height: 159,
-                            color: Color(0xFFD7FDFF),
-                            child: Center(
-                              child: Text(
-                                'generate invoice, quotation,etc',
-                                style: TextStyle(
-                                  color: Color(0xFF57B9BF),
-                                  fontSize: 16,
-                                ),
+            Positioned(
+              top: 140,
+              bottom: 40,
+              child: Container(
+                height: 620,
+                width: 390,
+                child: Padding(
+                  padding: const EdgeInsets.all(40.0),
+                  child: SingleChildScrollView(
+                    child: Column(
+                      children: [
+                        // SizedBox(
+                        //   height: 400,
+                        // ),
+                        Positioned(
+                          height: 159,
+                          top: 140,
+                          left: 30,
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(24),
+                            child: Container(
+                              width: 330, // Set the width of the Container
+                              height: 159, // Set the height of the Container
+                              color: Color(0xFF298EFF),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Row(
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceEvenly,
+                                    children: [
+                                      IconButton(
+                                        icon: SvgPicture.asset(
+                                          'assets/icons/Group 2504.svg',
+                                          height: 42.0,
+                                          width: 42.0,
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                      const SizedBox(width: 10),
+                                      Text(
+                                        'Scan documents',
+                                        style: TextStyle(
+                                          color: Colors.white,
+                                          fontSize: 20,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 10),
+                                      IconButton(
+                                        icon: SvgPicture.asset(
+                                          'assets/icons/Group 2505.svg',
+                                          height: 42.0,
+                                          width: 42.0,
+                                        ),
+                                        onPressed: () {},
+                                      ),
+                                    ],
+                                  ),
+                                  SizedBox(
+                                    width: 228,
+                                    height: 32,
+                                    child: Text(
+                                      "Scan Bills, Receipts, Invoices, Payment And Other Documents",
+                                      textAlign: TextAlign.center,
+                                      style: TextStyle(
+                                        color: Colors.white,
+                                        fontSize: 12,
+                                      ),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                         ),
-                      ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: ClipRRect(
+                        Container(
+                          alignment: Alignment.centerLeft,
+                          child: Text(
+                            "Company reports",
+                            textAlign: TextAlign.left,
+                            style: TextStyle(
+                              color: Colors.black,
+                              fontSize: 14,
+                            ),
+                          ),
+                        ),
+                        SizedBox(height: 20),
+                        ClipRRect(
                           borderRadius: BorderRadius.circular(16),
                           child: Container(
-                            height: 159,
-                            color: Color(0xFFF6F1FF),
-                            child: Center(
-                              child: Text(
-                                'gst - gstr1, 2, 3b etc.',
-                                style: TextStyle(
-                                  color: Color(0xFF9987E2),
-                                  fontSize: 16,
-                                ),
+                            width: double
+                                .infinity, // Expand the width to the maximum available
+                            height: 150, // Set the height of the Container
+                            color: Color(0xFFE2EBFF),
+                            child: Padding(
+                              padding: const EdgeInsets.all(15.0),
+                              child: Column(
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceEvenly,
+                                children: [
+                                  Text(
+                                    'check vouchers entries created by accountant',
+                                    style: TextStyle(
+                                      color: Color(0xFF587AD2),
+                                      fontSize: 16,
+                                    ),
+                                  ),
+                                  Align(
+                                    alignment: FractionalOffset.bottomLeft,
+                                    child: TextButton(
+                                      onPressed:
+                                          () {}, // Add the onPressed parameter
+                                      style: TextButton.styleFrom(
+                                        foregroundColor: Color(0xFF587AD2),
+                                        backgroundColor:
+                                            Colors.white, // Text color
+                                        padding: EdgeInsets.symmetric(
+                                            horizontal: 24, vertical: 12),
+                                        textStyle: TextStyle(
+                                          fontSize: 16,
+                                          fontWeight: FontWeight.bold,
+                                        ),
+                                        shape: RoundedRectangleBorder(
+                                          borderRadius:
+                                              BorderRadius.circular(8),
+                                        ),
+                                      ),
+                                      child: Text('All vouchers'),
+                                    ),
+                                  ),
+                                ],
                               ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  ),
-                  SizedBox(height: 10),
-                  Row(
-                    children: [
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: Container(
-                            height: 159,
-                            color: Color(0xFFE2EAFF),
-                            child: Center(
-                              child: Text(
-                                'All Ledgers Are Shown Here',
-                                style: TextStyle(
-                                  color: Color(0xFF587AD2),
-                                  fontSize: 16,
+                        SizedBox(height: 20),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16),
+                                child: Container(
+                                  height:
+                                      159, // Set the height of the Container
+                                  color: Color(0xFFD7FDFF),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          "generate invoice, quotation, etc",
+                                          style: TextStyle(
+                                            color: Color(0xFF57B9BF),
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: FractionalOffset.center,
+                                          child: TextButton(
+                                            onPressed:
+                                                () {}, // Add the onPressed parameter
+                                            style: TextButton.styleFrom(
+                                              foregroundColor:
+                                                  Color(0xFF57B9BF),
+                                              backgroundColor:
+                                                  Colors.white, // Text color
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 24, vertical: 12),
+                                              fixedSize: Size(141, 36),
+                                              textStyle: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                            child: Text('All invoices'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
-                          ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16),
+                                child: Container(
+                                  height:
+                                      159, // Set the height of the Container
+                                  color: Color(0xFFF6F1FF),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'gst - gstr1, 2, 3b etc.',
+                                          style: TextStyle(
+                                            color: Color(0xFF9987E2),
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: FractionalOffset.center,
+                                          child: TextButton(
+                                            onPressed:
+                                                () {}, // Add the onPressed parameter
+                                            style: TextButton.styleFrom(
+                                              foregroundColor:
+                                                  Color(0xFF9987E2),
+                                              backgroundColor:
+                                                  Colors.white, // Text color
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 24, vertical: 12),
+                                              fixedSize: Size(141, 36),
+                                              textStyle: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                            child: Text('My Day Book'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ],
                         ),
-                      ),
-                      SizedBox(width: 10),
-                      Expanded(
-                        child: ClipRRect(
-                          borderRadius: BorderRadius.circular(16),
-                          child: Container(
-                            height: 159,
-                            color: Color(0xFFCFE6FF),
-                            child: Center(
-                              child: Text(
-                                'All Profit & Loss Are Shown Here',
-                                style: TextStyle(
-                                  color: Color(0xFF1E78AF),
-                                  fontSize: 16,
+                        SizedBox(height: 10),
+                        Row(
+                          children: [
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16),
+                                child: Container(
+                                  height:
+                                      159, // Set the height of the Container
+                                  color: Color(0xFFF6F1FF),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'gst - gstr1, 2, 3b etc.',
+                                          style: TextStyle(
+                                            color: Color(0xFF9987E2),
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: FractionalOffset.center,
+                                          child: TextButton(
+                                            onPressed:
+                                                () {}, // Add the onPressed parameter
+                                            style: TextButton.styleFrom(
+                                              foregroundColor:
+                                                  Color(0xFF587AD2),
+                                              backgroundColor:
+                                                  Colors.white, // Text color
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 24, vertical: 12),
+                                              fixedSize: Size(141, 36),
+                                              textStyle: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                            child: Text('My Day Book'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
+                                ),
+                              ),
+                            ),
+                            SizedBox(width: 10),
+                            Expanded(
+                              child: ClipRRect(
+                                borderRadius: BorderRadius.circular(16),
+                                child: Container(
+                                  height:
+                                      159, // Set the height of the Container
+                                  color: Color(0xFFF6F1FF),
+                                  child: Padding(
+                                    padding: const EdgeInsets.all(15.0),
+                                    child: Column(
+                                      mainAxisAlignment:
+                                          MainAxisAlignment.spaceBetween,
+                                      children: [
+                                        Text(
+                                          'gst - gstr1, 2, 3b etc.',
+                                          style: TextStyle(
+                                            color: Color(0xFF9987E2),
+                                            fontSize: 16,
+                                          ),
+                                        ),
+                                        Align(
+                                          alignment: FractionalOffset.center,
+                                          child: TextButton(
+                                            onPressed:
+                                                () {}, // Add the onPressed parameter
+                                            style: TextButton.styleFrom(
+                                              foregroundColor:
+                                                  Color(0xFF587AD2),
+                                              backgroundColor:
+                                                  Colors.white, // Text color
+                                              padding: EdgeInsets.symmetric(
+                                                  horizontal: 24, vertical: 12),
+                                              fixedSize: Size(141, 36),
+                                              textStyle: TextStyle(
+                                                fontSize: 14,
+                                                fontWeight: FontWeight.bold,
+                                              ),
+                                              shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(8),
+                                              ),
+                                            ),
+                                            child: Text('My Day Book'),
+                                          ),
+                                        ),
+                                      ],
+                                    ),
+                                  ),
                                 ),
                               ),
                             ),
@@ -312,18 +493,22 @@ class MyApp extends StatelessWidget {
                       ),
                     ],
                   ),
-                ],
+                ),
               ),
             ),
-            Container(
+            Positioned(
+              top: 680,
+              right: 30,
               child: Container(
+                //floating button
                 height: 47,
                 width: 100,
                 alignment: Alignment.center,
                 child: OutlinedButton.icon(
+                  iconAlignment: IconAlignment.end,
                   onPressed: () {},
                   icon: SvgPicture.asset(
-                    'assets/icons/Path 83457.svg',
+                    'assets/icons/Path 83457.svg', // Replace with your icon path
                     height: 24.0,
                     width: 24.0,
                   ),
@@ -332,12 +517,14 @@ class MyApp extends StatelessWidget {
                     style: TextStyle(color: Colors.black, fontSize: 10),
                   ),
                   style: OutlinedButton.styleFrom(
-                    backgroundColor: Colors.white,
+                    backgroundColor:
+                        Colors.white, // Set the background color to white
                     side: BorderSide(
-                      color: Color(0xFF298EFF),
-                    ),
+                        color:
+                            Color(0xFF298EFF)), // Set the border color to blue
                     shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8),
+                      borderRadius:
+                          BorderRadius.circular(12), // Set less rounded corners
                     ),
                   ),
                 ),
