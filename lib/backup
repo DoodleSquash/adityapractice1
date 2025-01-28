@@ -1,0 +1,81 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Positioned(
+              height: 159,
+              top: 140,
+              left: 30,
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(24),
+                child: Container(
+                  width: 330, // Set the width of the Container
+                  height: 159, // Set the height of the Container
+                  color: Color(0xFF298EFF),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/Group 2504.svg',
+                              height: 42.0,
+                              width: 42.0,
+                            ),
+                            onPressed: () {},
+                          ),
+                          const SizedBox(width: 10),
+                          Text(
+                            'Scan documents',
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                          const SizedBox(width: 10),
+                          IconButton(
+                            icon: SvgPicture.asset(
+                              'assets/icons/Group 2505.svg',
+                              height: 42.0,
+                              width: 42.0,
+                            ),
+                            onPressed: () {},
+                          ),
+                        ],
+                      ),
+                      SizedBox(
+                        width: 228,
+                        height: 32,
+                        child: Text(
+                          "Scan Bills, Receipts, Invoices, Payment And Other Documents",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 12,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
